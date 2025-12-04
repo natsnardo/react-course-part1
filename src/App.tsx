@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 import ListGroup from "./components/ListGroup";
-// import "./App.css";
+import Like from "./components/Like";
+import "./App.css";
 
 function App() {
     let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
@@ -30,10 +31,12 @@ function App() {
                     </Alert>
                 )}
 
-                <Button color="success" onClick={() => setAlertVisiblity(true)}>
+                <Button color="primary" onClick={() => setAlertVisiblity(true)}>
                     Sign Up
                 </Button>
             </div>
+
+            <Like onClick={() => console.log("Clicked!")} />
         </>
     );
 }
